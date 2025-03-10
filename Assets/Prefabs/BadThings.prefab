@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1433123808238925162}
   - component: {fileID: 5235120749242277241}
   - component: {fileID: 3378707195169485785}
-  - component: {fileID: -7587324243648088140}
   - component: {fileID: -2839793176019810224}
+  - component: {fileID: -6318354333561942933}
   m_Layer: 0
   m_Name: BadThings
   m_TagString: BadThings
@@ -110,19 +110,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7587324243648088140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570048676808783072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e32e75c4684ef31458bf216f4dabf3a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeed: 2
 --- !u!54 &-2839793176019810224
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150,3 +137,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-6318354333561942933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570048676808783072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1acf0610bb7b11640ac2ba5bbe957c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 2

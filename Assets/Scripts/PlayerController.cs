@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     public float xMin = -8.0f;
     public float xMax = 8.0f;
 
+    // Vidas del jugador
+    public int lives = 5;
+
     void Update()
     {
         // Obtiene la entrada horizontal (teclas flecha o A/D)
@@ -22,4 +25,28 @@ public class PlayerController : MonoBehaviour
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, xMin, xMax);
         transform.position = clampedPosition;
     }
+
+    // Detecta colisiones con objetos que tengan un componente FallingObject
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("BadThings"))
+        {
+            lives--;
+            Debug.Log("¡Has perdido una vida! Vidas restantes: " + lives);
+
+            // Si aún no se destruye el objeto por su propio script, se puede forzar su destrucción
+            // Destroy(other.gameObject);
+
+            if (lives <= 0)
+            {
+                Debug.Log("¡Game Over!");
+                // Aquí puedes implementar la lógica para finalizar el juego, reiniciar la escena, etc.
+            }
+        }
+        else if (other.gameObject.CompareTag("GoodThings"))
+        {
+            Debug.Log("Nice");
+        }
+    }
 }
+

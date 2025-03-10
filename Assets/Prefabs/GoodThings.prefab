@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1978826251280764925}
   - component: {fileID: 9019008061597890624}
   - component: {fileID: 3687895433560627684}
-  - component: {fileID: -9157626554484074905}
   - component: {fileID: 392185213629364310}
+  - component: {fileID: -6406712482885678994}
   m_Layer: 0
   m_Name: GoodThings
   m_TagString: GoodThings
@@ -110,19 +110,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-9157626554484074905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833216374807922529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e32e75c4684ef31458bf216f4dabf3a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeed: 2
 --- !u!54 &392185213629364310
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150,3 +137,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-6406712482885678994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833216374807922529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1acf0610bb7b11640ac2ba5bbe957c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 2

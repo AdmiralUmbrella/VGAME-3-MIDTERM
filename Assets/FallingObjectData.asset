@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecbaeea55d9be81418ad4a9a3fe62ccf, type: 3}
-  m_Name: PlayerData
+  m_Script: {fileID: 11500000, guid: e32e75c4684ef31458bf216f4dabf3a3, type: 3}
+  m_Name: FallingObjectData
   m_EditorClassIdentifier: 
-  maxLives: 5
-  currentLives: 5
+  spawnInterval: 2
+  fallSpeed: 2
