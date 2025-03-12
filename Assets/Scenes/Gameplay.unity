@@ -615,7 +615,9 @@ MonoBehaviour:
   - prefab: {fileID: 570048676808783072, guid: b74173ce31a3a264ab4163a2354c7b2b, type: 3}
     spawnRate: 70
   - prefab: {fileID: 1833216374807922529, guid: 477ce44d61b171f4293862b6af373fef, type: 3}
-    spawnRate: 30
+    spawnRate: 25
+  - prefab: {fileID: 1833216374807922529, guid: 315d5d45069b4cd428e230ef5e55403d, type: 3}
+    spawnRate: 5
   spawnArea: {fileID: 1028607184}
 --- !u!65 &1028607184
 BoxCollider:
@@ -769,6 +771,7 @@ MonoBehaviour:
   xMin: -8
   xMax: 8
   lives: 5
+  spawner: {fileID: 1028607183}
 --- !u!54 &1751086953
 Rigidbody:
   m_ObjectHideFlags: 0

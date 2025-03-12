@@ -13,6 +13,13 @@ public class Spawner : MonoBehaviour
     [Header("Área de Spawn (BoxCollider)")]
     public BoxCollider spawnArea;
 
+    void Awake()
+    {
+        objectData.spawnInterval = 2.0f;
+        objectData.fallSpeed = 2.0f;
+          
+    }
+
     void Start()
     {
         if (spawnArea == null)

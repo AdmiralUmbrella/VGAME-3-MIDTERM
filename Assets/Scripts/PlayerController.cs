@@ -1,3 +1,6 @@
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -10,6 +13,11 @@ public class PlayerController : MonoBehaviour
 
     // Vidas del jugador
     public int lives = 5;
+
+    [Header("Referencias")]
+    public Spawner spawner;
+
+    private List<GameObject> goodThingsCollected = new List<GameObject>();
 
     void Update()
     {
@@ -45,7 +53,27 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("GoodThings"))
         {
-            Debug.Log("Nice");
+            Debug.Log("Recogiste un objeto bueno");
+
+            //Añade a la lista
+            goodThingsCollected.Add(other.gameObject);
+
+            //Cada 4, se aumenta la dificultad
+            if(goodThingsCollected.Count % 4 == 0)
+            {
+                //Incrementamos la velocidad de caída
+                spawner.objectData.fallSpeed += 0.5f;
+
+                //Disminuimos el intervalo de spawn (con clamp para evitar valores negativos)
+                spawner.objectData.spawnInterval = Mathf.Max(spawner.objectData.spawnInterval - 0.2f, 0.2f);
+
+                Debug.Log("¡Aumenta la dificultad! Velocidad de caída: " + spawner.objectData.fallSpeed +
+                          ", Intervalo de spawn: " + spawner.objectData.spawnInterval);
+            }
+        }
+        else if (other.gameObject.CompareTag("SpecialThings"))
+        {
+            Debug.Log("SPECIAL");
         }
     }
 }
